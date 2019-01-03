@@ -11,7 +11,7 @@ class NavbarPresenter extends Presenter
      */
     public function getOpenTagWrapper()
     {
-        return PHP_EOL . '<ul class="nav navbar-nav">' . PHP_EOL;
+        return PHP_EOL . '<ul class="navigation clearfix">' . PHP_EOL;
     }
 
     /**
@@ -33,7 +33,7 @@ class NavbarPresenter extends Presenter
     /**
      * {@inheritdoc }.
      */
-    public function getActiveState($item, $state = ' class="active"')
+    public function getActiveState($item, $state = ' class="current"')
     {
         return $item->isActive() ? $state : null;
     }

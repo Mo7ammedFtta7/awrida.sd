@@ -43,6 +43,8 @@ class MenuItemUriGeneratorTest extends BaseMenuTest
     /** @test */
     public function it_generates_uri_with_the_parents_slug()
     {
+        dd('dddd');
+
         Event::fake();
         $this->page->create([
             'is_home' => 1,

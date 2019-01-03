@@ -21,6 +21,8 @@ class RootMenuItemCreator
     {
         $this->menuItem = $menuItem;
         $this->setting = $setting;
+        dd('sdfsdf');
+
     }
 
     public function handle(MenuWasCreated $event)

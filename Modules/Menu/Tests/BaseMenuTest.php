@@ -134,6 +134,7 @@ abstract class BaseMenuTest extends TestCase
      */
     protected function createMenuItemForMenu($menuId, $position, $parentId = null)
     {
+        dd('dddd');
         $faker = Factory::create();
 
         $title = implode(' ', $faker->words(3));

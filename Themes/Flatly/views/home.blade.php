@@ -1,275 +1,414 @@
 @extends('layouts.master')
 
 @section('title')
-    {{ $page->title }}| @parent
+    {{ $page->title }}| @parent Home
 @stop
 @section('meta')
     <meta name="title" content="{{ $page->meta_title}}" />
     <meta name="description" content="{{ $page->meta_description }}" />
 @stop
 
-<!--/#main-slider-->
-{{-- <div class="container">
-<div class="section-header">
-        <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">{{ $page->title }}</h2>
-        <p class="text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></p>
-    </div>
-</div> --}}
-<section class="banner--section">
-        <div class="banner--slider owl-carousel" data-owl-dots="true">
-           <div class="banner--item bg--overlay" data-bg-img="/img/banner-home-img/slider-bg-01.jpg">
-              <div class="vc--parent">
-                 <div class="vc--child">
-                    <div class="container">
-                       <div class="row">
-                          <div class="col-md-8 col-md-offset-2">
-                             <div class="banner--content text-center pt--60 pb--80">
-                                <div class="title text-uppercase">
-                                   <h2 class="h1">منظمة اوردة</h2>
-                                   <h3 class="h3">للتنمية الانسانية</h3>
 
-                                </div>
-                                <div class="desc">
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                                </div>
-                                <div class="action"> <a href="#" class="btn btn-lg btn-default">Read More<i class="ml--8 fa fa-check-circle"></i></a> <a href="#" class="btn btn-lg btn-primary">Our Plans<i class="ml--8 fa fa-check-circle"></i></a> </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-           <div class="banner--item bg--overlay" data-bg-img="/img/banner-home-img/slider-bg-02.jpg">
-              <div class="vc--parent">
-                 <div class="vc--child">
-                    <div class="container">
-                       <div class="row">
-                          <div class="col-md-8 col-md-offset-2">
-                             <div class="banner--content text-center pt--60 pb--80">
-                                <div class="title text-uppercase">
-                                      <h2 class="h1">منظمة اوردة</h2>
-                                      <h3 class="h3">للتنمية الانسانية</h3>
-
-                                </div>
-                                <div class="desc">
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                                </div>
-                                <div class="action"> <a href="#" class="btn btn-lg btn-default">Read More<i class="ml--8 fa fa-check-circle"></i></a> <a href="#" class="btn btn-lg btn-primary">Our Plans<i class="ml--8 fa fa-check-circle"></i></a> </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-           <div class="banner--item bg--overlay" data-bg-img="/img/banner-home-img/slider-bg-03.jpg">
-              <div class="vc--parent">
-                 <div class="vc--child">
-                    <div class="container">
-                       <div class="row">
-                          <div class="col-md-8 col-md-offset-2">
-                             <div class="banner--content text-center pt--60 pb--80">
-                                   <h2 class="h1">منظمة اوردة</h2>
-                                   <h3 class="h3">للتنمية الانسانية</h3>
-
-                                <div class="desc">
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                                </div>
-                                <div class="action"> <a href="#" class="btn btn-lg btn-default">Read More<i class="ml--8 fa fa-check-circle"></i></a> <a href="#" class="btn btn-lg btn-primary">Our Plans<i class="ml--8 fa fa-check-circle"></i></a> </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-     </section>
      
      @section('content')
-     {!! $page->body !!}
 
-<section class="counter--section pt--80 pb--50 bg--overlay bg--img" data-rjs="2" style="background-image: url(&quot;../../../assets/img/counter-img/bg.jpg&quot;);">
-    <div class="container">
-       <div class="row AdjustRow" style="position: relative; height: 456px;">
-          <div class="col-md-3 col-xs-6
-             col-xss-12 pb--30" style="position: absolute; right: 0px; top: 0px;">
-             <div class="counter--item
-                style--1">
-                <div class="img"> <img src="../../../assets/img/counter-img/icon-01.png" alt="" data-rjs="2"> </div>
-                <div class="title">
-                   <h2 class="h4">عمليات عيون</h2>
-                </div>
-                <div class="count">
-                   <h3 class="h1"><span data-trigger="counterUp">3000</span>+</h3>
-                </div>
-             </div>
-          </div>
-          <div class="col-md-3 col-xs-6
-             col-xss-12 pb--30" style="position: absolute; right: 375px; top: 0px;">
-             <div class="counter--item
-                style--1">
-                <div class="img"> <img src="../../../assets/img/counter-img/icon-02.png" alt="" data-rjs="2"> </div>
-                <div class="title">
-                   <h2 class="h4">سماعة اذن</h2>
-                </div>
-                <div class="count">
-                   <h3 class="h1"><span data-trigger="counterUp">300</span>+</h3>
-                </div>
-             </div>
-          </div>
-          <div class="col-md-3 col-xs-6
-             col-xss-12 pb--30" style="position: absolute; right: 0px; top: 228px;">
-             <div class="counter--item
-                style--1">
-                <div class="img"> <img src="../../../assets/img/counter-img/icon-03.png" alt="" data-rjs="2"> </div>
-                <div class="title">
-                   <h2 class="h4">بير</h2>
-                </div>
-                <div class="count">
-                   <h3 class="h1"><span data-trigger="counterUp">12</span>+</h3>
-                </div>
-             </div>
-          </div>
-          <div class="col-md-3 col-xs-6
-             col-xss-12 pb--30" style="position: absolute; right: 375px; top: 228px;">
-             <div class="counter--item
-                style--1">
-                <div class="img"> <img src="../../../assets/img/counter-img/icon-04.png" alt="" data-rjs="2"> </div>
-                <div class="title">
-                   <h2 class="h4">محاضرة تثقيقية</h2>
-                </div>
-                <div class="count">
-                   <h3 class="h1"><span data-trigger="counterUp">27</span>+</h3>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </section>
- 
 
-     <section class="team--section pt--80 pb--80 bg--c-lighterblue">
-            <div class="container">
-               <div class="section--title pb--50 text-center">
-                  <h2 class="h1 text-uppercase">المكتب التنفيذي</h2>
-                  <div class="row">
-                     <div class="col-md-6 col-md-offset-3">
-                        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> --}}
+     <!--Main Slider-->
+     <section class="main-slider" dir="ltr">
+            
+         <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
+             <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+                 <ul>
+                     
+                     <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="img/image-5.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+                     <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="../../../img/image-4.jpg"> 
+                     
+                     <div class="tp-caption" 
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingtop="[0,0,0,0]"
+                     data-responsive_offset="on"
+                     data-type="text"
+                     data-height="none"
+                     data-width="['600','700','650','460']"
+                     data-whitespace="normal"
+                     data-hoffset="['15','15','15','15']"
+                     data-voffset="['-130','-150','-160','-130']"
+                     data-x="['left','left','left','left']"
+                     data-y="['middle','middle','middle','middle']"
+                     data-textalign="['top','top','top','top']"
+                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                     >
+                       
                      </div>
-                  </div>
-               </div>
-               <div class="team--members owl-carousel" data-owl-margin="30" data-owl-nav="true" data-owl-responsive='{"0":{"items": "1"}, "481":{"items": "2"}, "992":{"items": "3"}}'>
-                  <div class="team--member text-center">
-                     <div class="img"> <img src="../../../assets/img/team-img/member-01.jpg" alt="" class="img-circle"> </div>
-                     <div class="name text-uppercase">
-                        <h3 class="h4">Jeffrey Stevens</h3>
+                     
+                     <div class="tp-caption" 
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingtop="[0,0,0,0]"
+                     data-responsive_offset="on"
+                     data-type="text"
+                     data-height="none"
+                     data-width="['600','700','650','460']"
+                     data-whitespace="normal"
+                     data-hoffset="['15','15','15','15']"
+                     data-voffset="['-40','-60','-70','-50']"
+                     data-x="['left','left','left','left']"
+                     data-y="['middle','middle','middle','middle']"
+                     data-textalign="['top','top','top','top']"
+                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                     >
+                        <h2>Welcom <br> to our website</h2>
                      </div>
-                     <div class="role">
-                        <p>Founder</p>
+                     
+                     <div class="tp-caption" 
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingtop="[0,0,0,0]"
+                     data-responsive_offset="on"
+                     data-type="text"
+                     data-height="none"
+                     data-width="['600','700','650','460']"
+                     data-whitespace="normal"
+                     data-hoffset="['15','15','15','15']"
+                     data-voffset="['50','30','20','15']"
+                     data-x="['left','left','left','left']"
+                     data-y="['middle','middle','middle','middle']"
+                     data-textalign="['top','top','top','top']"
+                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                     >
+                        <h1>AWRIDA</h1>
                      </div>
-                     <div class="social">
-                        <ul class="nav">
-                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                           <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                        </ul>
+                     
+                     <div class="tp-caption" 
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingtop="[0,0,0,0]"
+                     data-responsive_offset="on"
+                     data-type="text"
+                     data-height="none"
+                     data-width="['600','700','650','480']"
+                     data-whitespace="normal"
+                     data-hoffset="['15','15','15','15']"
+                     data-voffset="['120','100','70','60']"
+                     data-x="['left','left','left','left']"
+                     data-y="['middle','middle','middle','middle']"
+                     data-textalign="['top','top','top','top']"
+                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                     >
+                        <div class="text">for humanitarian devolvement</div>
                      </div>
-                  </div>
-                  <div class="team--member text-center">
-                     <div class="img"> <img src="../../../assets/img/team-img/member-02.jpg" alt="" class="img-circle"> </div>
-                     <div class="name text-uppercase">
-                        <h3 class="h4">Harold Crawford</h3>
+                     
+                     <div class="tp-caption tp-resizeme" 
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingtop="[0,0,0,0]"
+                     data-responsive_offset="on"
+                     data-type="text"
+                     data-height="none"
+                     data-width="['600','550','550','460']"
+                     data-whitespace="normal"
+                     data-hoffset="['15','15','15','15']"
+                     data-voffset="['190','160','130','120']"
+                     data-x="['left','left','left','left']"
+                     data-y="['middle','middle','middle','middle']"
+                     data-textalign="['top','top','top','top']"
+                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                     >
+                        <a href="about.html" class="theme-btn btn-style-one">More info</a>
                      </div>
-                     <div class="role">
-                        <p>Sales</p>
-                     </div>
-                     <div class="social">
-                        <ul class="nav">
-                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                           <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="team--member text-center">
-                     <div class="img"> <img src="../../../assets/img/team-img/member-03.jpg" alt="" class="img-circle"> </div>
-                     <div class="name text-uppercase">
-                        <h3 class="h4">Jack Lopez</h3>
-                     </div>
-                     <div class="role">
-                        <p>Manager</p>
-                     </div>
-                     <div class="social">
-                        <ul class="nav">
-                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                           <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="team--member text-center">
-                     <div class="img"> <img src="../../../assets/img/team-img/member-04.jpg" alt="" class="img-circle"> </div>
-                     <div class="name text-uppercase">
-                        <h3 class="h4">Larry Hall</h3>
-                     </div>
-                     <div class="role">
-                        <p>Support</p>
-                     </div>
-                     <div class="social">
-                        <ul class="nav">
-                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                           <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
- <section class="call-to-action pt--50 pb--50 bg--c-main">
-      <div class="container"> 
-          <div class="cta--content text-center">
-      <div class="title"> 
-          <h2 class="h3">اخر الاخبار</h2> </div>
-      </div>
-    </div>
-    </section>
-<section class="blog--section pt--80 pb--50 bg--c-lighterblue">
-   
-               
-    <div class="row AdjustRow" style="position: relative; height: 1926.77px;">
-            @foreach ($latestPosts as $item)
-
-        <div class="col-md-3 col-sm-12 pb--30" style="position: absolute; right: 0px; top: 0px;">
-               <div class="post--item">
-                  <div class="post--img">
-                       <img src="../../../assets/media/{{ $item->thumbnail->filename }}" style="height: 150;" alt="" data-rjs="2"> <a href="#" class="date"><i class="mr--8 fa fa-calendar-o"></i>{{ $item->created_at->format('d-m-Y') }}</a> </div>
-                  <div class="post--inner">
-                     <ul class="nav meta">
-                        {{-- <li><a href="#"><i class="fa fa-heart-o"></i>23</a></li>
-                        <li><a href="#"><i class="fa fa-comments-o"></i>13</a></li> --}}
-                     </ul>
-                     <div class="title">
-                        <h2 class="h4"><a href="{{ URL::route($currentLocale . '.blog.slug', [$item->slug]) }}" class="btn-link">{{ $item->title }}</a></h2>
-                     </div>
-                     <div class="content">
-                        <p>{{ substr($item->content, 0, 200)  }}</p>
-                     </div>
-                     <div class="action text-right"> <a href="{{ URL::route($currentLocale . '.blog.slug', [$item->slug]) }}" class="btn btn-default">قراءة المزيد<i class="ml--5 fa fa-long-arrow-right"></i></a> </div>
-                  </div>
-               </div>
-            </div>
-            @endforeach  
-
+                     
+                     </li>
+                     
+                     
+                 </ul>
+             </div>
          </div>
-
-</section>
- 
+     </section>
+     <section class="services-single-section">
+         <div class="auto-container">
+             <div class="row clearfix">
+                 
+              <!--Introduction Section-->
+              <div class="introduction-section">
+                 <div class="sec-title">
+                     <div class="clearfix">
+                         <div class="pull-left">
+                             <h2> {{ __('full.intro') }}</h2>
+                              <div class="separator"></div>
+                          </div>
+                          <div class="pull-right">
+                             <div class="text">{{ __('full.intro1') }}</div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="row clearfix">
+                     
+                      <!--Intro Video Column-->
+                      <div class="intro-video-column col-md-6 col-sm-12 col-xs-12">
+                         <div class="inner-column">
+                             <div class="row clearfix">
+                                 <div class="column col-md-6 col-sm-6 col-xs-12">
+                                      <div class="image">
+                                          <img src="../../../assets/images/resource/video-img-3 (1).jpg" alt="">
+                                      </div>
+                                  </div>
+                                  <div class="column col-md-6 col-sm-6 col-xs-12">
+                                      <div class="image image-2">
+                                          <img src="../../../assets/images/resource/video-img-3.jpg" alt="">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="play-box">
+                                 <div class="play-inner">
+                                     <span class="icon-box">
+                                         <span class="icon flaticon-play-button-5"></span>
+                                      </span>
+                                      <div class="video">Play Video</div>
+                                      <a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="lightbox-image overlay-box"></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="intro-content-column col-md-6 col-sm-12 col-xs-12">
+                         <div class="inner-column">
+                             <div class="text">
+                                 <p>{{ __('full.intro2') }}.</p>
+                                  <p>{{ __('full.intro3') }}</p>
+                              </div>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  
+              </div>
+              
+          </div>
+      </section>
+      <section class="video-section" style="background-image:url(../img/background/4.jpg)">
+       
+       <div class="row">
+            <div class="col-md-6">
+         <div class="auto-container">
+             <h1> <span class="theme_color">{{ __('full.vision') }}</span></h1>
+              <div class="text">{{ __('full.visiontxt') }}</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+               <div class="auto-container">
+                   <h1> <span class="theme_color">{{ __('full.mission') }}</span></h1>
+                    <div class="text">{{ __('full.missiontxt') }}</div>
+                  </div>
+                </div>
+         </div>
+         </div>
+         </section>
+     <!--End Main Slider-->
+    
+    <!--Testimonial Section-->
+    <section class="testimonial-section" style="background-image:url(../img/background/pattern-2.png)">
+    	<div class="auto-container">
+        	<!--Title Box-->
+            <div class="title-box">
+                <div class="row clearfix">
+                    <div class="column col-md-4 col-sm-12 col-xs-12">
+                        <div class="sec-title">
+                            <h2>{{ __('full.Office') }}
+                            </h2>
+                            <div class="separator"></div>
+                        </div>
+                    </div>
+                    <div class="column col-md-8 col-sm-12 col-xs-12">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="two-item-carousel owl-carousel owl-theme" dir="ltr">
+            	
+                <!--Testimonial Block-->
+                <div class="testimonial-block">
+                	<div class="inner-box">
+                    	<div class="clearfix">
+                        	
+                            <!--Image Column-->
+                            <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="image">
+                                	<img src="../../../img/resource/testimonial-1.jpg" alt="" />
+                                </div>
+                            </div>
+                            <!--Content Column-->
+                            <div class="content-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="inner-column">
+                                	<div class="content">
+                                    	<div class="text">محمود الرزيقي</div>
+                                        <div class="curve"></div>
+                                    </div>
+                                    <div class="lower-box">
+                                    	<h3>Mahmmod Alrizagy</h3>
+                                    	<div class="locations">General Manager</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Testimonial Block-->
+                <div class="testimonial-block">
+                	<div class="inner-box">
+                    	<div class="clearfix">
+                        	
+                            <!--Image Column-->
+                            <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="image">
+                                	<img src="../../../img/resource/testimonial-2.jpg" alt="" />
+                                </div>
+                            </div>
+                            <!--Content Column-->
+                            <div class="content-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="inner-column">
+                                	<div class="content">
+                                    	<div class="text">امنة بنت وهب </div>
+                                        <div class="curve"></div>
+                                    </div>
+                                    <div class="lower-box">
+                                    	<h3>Amina Bnt_wahb</h3>
+                                    	<div class="locations">Executive Director</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Testimonial Block-->
+                <div class="testimonial-block">
+                	<div class="inner-box">
+                    	<div class="clearfix">
+                        	
+                            <!--Image Column-->
+                            <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="image">
+                                	<img src="../../../img/resource/testimonial-1.jpg" alt="" />
+                                </div>
+                            </div>
+                            <!--Content Column-->
+                            <div class="content-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="inner-column">
+                                	<div class="content">
+                                    	<div class="text">محمود الرزيقي</div>
+                                        <div class="curve"></div>
+                                    </div>
+                                    <div class="lower-box">
+                                    	<h3>Mahmmod Alrizagy</h3>
+                                    	<div class="locations">General Manager</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Testimonial Block-->
+                <div class="testimonial-block">
+                	<div class="inner-box">
+                    	<div class="clearfix">
+                        	
+                            <!--Image Column-->
+                            <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="image">
+                                	<img src="../../../img/resource/testimonial-2.jpg" alt="" />
+                                </div>
+                            </div>
+                            <!--Content Column-->
+                            <div class="content-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="inner-column">
+                                	<div class="content">
+                                    	<div class="text">امنة بنت وهب </div>
+                                        <div class="curve"></div>
+                                    </div>
+                                    <div class="lower-box">
+                                    	<h3>Amina Bnt_wahb</h3>
+                                    	<div class="locations">Executive Director</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Testimonial Block-->
+                <div class="testimonial-block">
+                	<div class="inner-box">
+                    	<div class="clearfix">
+                        	
+                            <!--Image Column-->
+                            <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="image">
+                                	<img src="../../../img/resource/testimonial-1.jpg" alt="" />
+                                </div>
+                            </div>
+                            <!--Content Column-->
+                            <div class="content-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="inner-column">
+                                	<div class="content">
+                                    	<div class="text">محمود الرزيقي</div>
+                                        <div class="curve"></div>
+                                    </div>
+                                    <div class="lower-box">
+                                    	<h3>Mahmmod Alrizagy</h3>
+                                    	<div class="locations">General Manager</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Testimonial Block-->
+                <div class="testimonial-block">
+                	<div class="inner-box">
+                    	<div class="clearfix">
+                        	
+                            <!--Image Column-->
+                            <div class="image-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="image">
+                                	<img src="../../../img/resource/testimonial-2.jpg" alt="" />
+                                </div>
+                            </div>
+                            <!--Content Column-->
+                            <div class="content-column col-md-6 col-sm-6 col-xs-12">
+                            	<div class="inner-column">
+                                	<div class="content">
+                                    	<div class="text"> </div>
+                                        <div class="curve"></div>
+                                    </div>
+                                    <div class="lower-box">
+                                    	<h3>Amina Bnt_wahb</h3>
+                                    	<div class="locations">Executive Director</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+<section class="call-to-action-section" style="background-image:url(../img/background/5.jpg)">
+      <div class="auto-container">
+          <h2>{{ __('full.conus') }} </h2>
+           <div class="number"> 00249912854218</div>
+       </div>
+   </section>
          @stop
 

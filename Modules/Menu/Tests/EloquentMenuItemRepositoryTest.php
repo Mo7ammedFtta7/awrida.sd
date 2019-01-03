@@ -22,6 +22,7 @@ class EloquentMenuItemRepositoryTest extends BaseMenuTest
     public function it_should_create_menu_item_as_root()
     {
         $menu = $this->createMenu('second', 'Second Menu');
+        dd('xxxx');
 
         $data = [
             'menu_id' => $menu->id,

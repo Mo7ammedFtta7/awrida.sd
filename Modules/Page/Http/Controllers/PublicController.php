@@ -64,7 +64,6 @@ class PublicController extends BasePublicController
      */
     public function homepage()
     {
-        $limit = $this->setting->get('blog::latest-posts-amount', locale(), 5);
 
         $page = $this->page->findHomepage();
 

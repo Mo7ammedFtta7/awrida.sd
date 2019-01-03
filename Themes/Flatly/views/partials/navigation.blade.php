@@ -1,122 +1,165 @@
-{{-- 
 
-    <header id="header">
-        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
 
+         <div class="nav-outer clearfix" @if(LaravelLocalization::getCurrentLocale() =='ar') style="float:left" @endif>
+                         
+                <!-- Main Menu -->
+                <nav class="main-menu">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->    	
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="navbar-collapse collapse clearfix">
+                            @menu('main')
+
+                    </div>
+                </nav>
+                <!-- Main Menu End-->
                 
+                <!--Outer Box-->
+                <div class="outer-box">
+                    <!--Search Box-->
+                    <div class="search-box-outer">
+                        <div class="dropdown">
+                            <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                            <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                <li class="panel-outer">
+                                    <div class="form-container">
+                                        <form method="post" action="http://steelthemes.com/demo/html/Bruges/blog.html">
+                                            <div class="form-group">
+                                                <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                                <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+    
+    
+    
 
-                <div class="navbar-header @if (LaravelLocalization::setLocale()=="ar")
-                navbar-right
-                @else
-                navbar-left
-                @endif">
+           
+{{-- 
+         <div class="nav-outer clearfix">
+                         
+            <!-- Main Menu -->
+            <nav class="main-menu">
+                <div class="navbar-header">
+                    <!-- Toggle Button -->    	
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ URL::to('/') }}">@setting('core::site-name')</a>
                 </div>
-
-                <div class="collapse navbar-collapse  @if (LaravelLocalization::setLocale()=="ar")
-                navbar-left
-                @else
-                navbar-right
-                @endif">
-                               @menu('main')
-         </div>
+                
+                <div class="navbar-collapse collapse clearfix">
+                    <ul class="navigation clearfix">
+                        <li class="current dropdown"><a href="#">Home</a>
+                           <ul>
+                                <li><a href="index-2.html">Homepage 01</a></li>
+                                <li><a href="index-3.html">Homepage 02</a></li>
+                                <li class="dropdown"><a href="#">Header Styles</a>
+                                    <ul>
+                                        <li><a href="index-2.html">Header Style One</a></li>
+                                        <li><a href="index-3.html">Header Style Two</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Services</a>
+                           <ul>
+                                <li><a href="services.html">View All Services</a></li>
+                                <li><a href="residential-design.html">Residential Design</a></li>
+                                <li><a href="industrial-design.html">Industrial Design</a></li>
+                                <li><a href="restaurant-design.html">Restaurant Design</a></li>
+                                <li><a href="commercial-design.html">Commercial Design</a></li>
+                                <li><a href="corporate-design.html">Corporate Design</a></li>
+                                <li><a href="hospitality-design.html">Hospitality Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">About Us</a>
+                           <ul>
+                                <li><a href="about.html">About Our Company</a></li>
+                                <li><a href="press.html">Press Release</a></li>
+                                <li><a href="testimonial.html">Testimonials</a></li>
+                                <li><a href="faq.html">FAQ’s</a></li>
+                                <li><a href="catelogue.html">Catelogue</a></li>
+                                <li><a href="not-found.html">404 Page</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Projects</a>
+                           <ul>
+                                <li class="dropdown"><a href="#">Grid View</a>
+                                    <ul>
+                                        <li><a href="project-three-column.html">Project Three Column</a></li>
+                                        <li><a href="project-four-column.html">Project Four Column</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="project-fullwidth.html">Project Fullwidth</a></li>
+                                <li><a href="project-modern.html">Modern View</a></li>
+                                <li><a href="project-masonry.html">Project Masonry</a></li>
+                                <li><a href="project-single.html">Single Project</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Blog</a>
+                           <ul>
+                                <li><a href="blog.html">Blog Default</a></li>
+                                <li><a href="blog-large.html">Blog Large image</a></li>
+                                <li><a href="blog-single.html">Single Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#">Shop</a>
+                           <ul>
+                                <li><a href="shop.html">Shop Products</a></li>
+                                <li><a href="shop-single.html">Product Single</a></li>
+                                <li><a href="shoping-cart.html">Shopping Cart</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="account.html">My account</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                </div>
+            </nav>
+            <!-- Main Menu End-->
+            
+            <!--Outer Box-->
+            <div class="outer-box">
+                <!--Search Box-->
+                <div class="search-box-outer">
+                    <div class="dropdown">
+                        <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                        <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                            <li class="panel-outer">
+                                <div class="form-container">
+                                    <form method="post" action="http://steelthemes.com/demo/html/Bruges/blog.html">
+                                        <div class="form-group">
+                                            <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                            <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Cart Box-->
+                <div class="cart-box">
+                   <a href="shop-single.html" class="cart"><span class="icon flaticon-commerce"><span class="number">0</span></span> $0.00</a>
+                </div>
             </div>
-            <!--/.container-->
-        </nav>
-        <!--/nav-->
+            
+        </div>
 
-    </header> 
-    <!--/header--> --}}
-
-
-    <div id="headerNav" class="navbar-collapse collapse float--right">
-            <ul class="header--nav-links nav">
-               {{-- <li class="active"><a href="index.html">Home</a></li>
-               <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hosting</a> 
-                  <ul class="dropdown-menu">
-                     <li><a href="shared-hosting.html">Shared Hosting</a></li>
-                     <li><a href="reseller-hosting.html">Reseller Hosting</a></li>
-                     <li><a href="vps-hosting.html">VPS Hosting</a></li>
-                     <li><a href="dedicated-hosting.html">Dedicated Hosting</a></li>
-                  </ul>
-               </li>
-               <li><a href="domain.html">Domain</a></li>
-               <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a> 
-                  <ul class="dropdown-menu">
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a> 
-                        <ul class="dropdown-menu">
-                           <li><a href="about.html">About CloudSky</a></li>
-                           <li><a href="datacenter.html">About Datacenter</a></li>
-                        </ul>
-                     </li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">SSL Certificates</a> 
-                        <ul class="dropdown-menu">
-                           <li><a href="ssl-certificates.html">SSL Certificates</a></li>
-                           <li><a href="ssl-certificate-details.html">SSL Certificate Details</a></li>
-                        </ul>
-                     </li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a> 
-                        <ul class="dropdown-menu">
-                           <li><a href="services.html">Services</a></li>
-                           <li><a href="service-details.html">Service Details</a></li>
-                        </ul>
-                     </li>
-                     <li><a href="team.html">Team</a></li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio</a> 
-                        <ul class="dropdown-menu">
-                           <li><a href="portfolio.html">Portfolio</a></li>
-                           <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                        </ul>
-                     </li>
-                     <li><a href="pricing.html">Pricing</a></li>
-                     <li><a href="clients.html">Our Clients</a></li>
-                     <li><a href="affiliate-marketing.html">Affiliate Marketing</a></li>
-                     <li><a href="faq.html">FAQ</a></li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages</a> 
-                        <ul class="dropdown-menu">
-                           <li><a href="coming-soon.html">Coming Soon</a></li>
-                           <li><a href="404.html">404</a></li>
-                        </ul>
-                     </li>
-                  </ul>
-               </li>
-               <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop</a> 
-                  <ul class="dropdown-menu">
-                     <li><a href="shop.html">Shop</a></li>
-                     <li><a href="shop-details.html">Shop Details</a></li>
-                     <li><a href="cart.html">Cart</a></li>
-                     <li><a href="checkout.html">Checkout</a></li>
-                  </ul>
-               </li>
-               <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a> 
-                  <ul class="dropdown-menu">
-                     <li><a href="blog-sidebar-right.html">Blog Sidebar Right</a></li>
-                     <li><a href="blog-sidebar-left.html">Blog Sidebar Left</a></li>
-                     <li><a href="blog-details.html">Blog Details</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="contact.html">Contact</a>
-               </li> --}}
-               @menu('main')
-
-            </ul>
-         </div>
-
-
+ --}}

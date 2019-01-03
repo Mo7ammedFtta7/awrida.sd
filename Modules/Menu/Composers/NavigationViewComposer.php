@@ -24,6 +24,8 @@ class NavigationViewComposer
     {
         $this->menu = $menu;
         $this->menuItem = $menuItem;
+        dd('sdfsdf');
+
     }
 
     public function compose()

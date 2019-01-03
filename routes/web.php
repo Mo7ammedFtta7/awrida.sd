@@ -10,6 +10,10 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return "done!";
+});
 Route::get('/', function () {
     return view('welcome');
 });

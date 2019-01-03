@@ -41,7 +41,7 @@ class EloquentMenuItemRepository extends EloquentBaseRepository implements MenuI
      */
     public function rootsForMenu($menuId)
     {
-        if (App::getLocale()=="ar") {
+        if (App::getLocale()=="en") {
             return $this->model->whereHas('translations', function (Builder $q) {
                 $q->where('status', 1);
                 $q->where('locale', App::getLocale());
